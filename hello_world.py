@@ -39,5 +39,6 @@ if __name__ == "__main__":
     """
 
     logger.debug('Starting {}()...'.format(__name__))
+    print("Hello World")
     # pass
     logger.debug('Ending {}()...'.format(__name__))
