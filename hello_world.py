@@ -15,9 +15,11 @@
 # =============================================================================
 
 import logging
+import sys
+
 
 logging.basicConfig(
-    filename='Output.log',       # consider using formatting instead
+    filename='debug.log',       # consider using formatting instead
     filemode='w',                       # overwrites the file every time
     level=logging.DEBUG,                # lowest logging level
     format="%(asctime)s|%(levelname)s: %(name)s @ %(lineno)d|%(message)s"
@@ -39,6 +41,8 @@ if __name__ == "__main__":
     """
 
     logger.debug('Starting {}()...'.format(__name__))
-    print("Hello World")
+
+    with open('Output.log','w') as sys.stdout:
+        print("Hello World")
     # pass
     logger.debug('Ending {}()...'.format(__name__))
